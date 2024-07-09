@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1280px) {
+  .arrow span {
+    display: block;
+    width: 2.6vw;
+    height: 2.6vw;
+    border-bottom: 2px solid rgb(255, 140, 248);
+    border-right: 2px solid rgb(255, 140, 210);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .arrow span {
+    display: block;
+    width: 0.6vw;
+    height: 0.6vw;
+    border-bottom: 2px solid rgb(255, 140, 248);
+    border-right: 2px solid rgb(255, 140, 210);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.6s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
